@@ -1,6 +1,6 @@
-// https://atcoder.jp/contests/abc380/tasks/abc380_a
+// https://open.kattis.com/problems/pairingsocks
 pub mod solution {
-//{"name":"A - 123233","group":"AtCoder - AtCoder Beginner Contest 380","url":"https://atcoder.jp/contests/abc380/tasks/abc380_a","interactive":false,"timeLimit":2000,"tests":[{"input":"123233\n","output":"Yes\n"},{"input":"123234\n","output":"No\n"},{"input":"323132\n","output":"Yes\n"},{"input":"500000\n","output":"No\n"}],"testType":"single","input":{"type":"stdin","fileName":null,"pattern":null},"output":{"type":"stdout","fileName":null,"pattern":null},"languages":{"java":{"taskClass":"A123233"}}}
+//{"name":"Pairing Socks","group":"Kattis","url":"https://open.kattis.com/problems/pairingsocks","interactive":false,"timeLimit":1000,"tests":[{"input":"2\n1 2 2 1\n","output":"4\n"},{"input":"1\n3 7\n","output":"impossible\n"},{"input":"3\n5 5 5 5 5 5\n","output":"6\n"}],"testType":"single","input":{"type":"stdin","fileName":null,"pattern":null},"output":{"type":"stdout","fileName":null,"pattern":null},"languages":{"java":{"taskClass":"PairingSocks"}}}
 
 use crate::algo_lib::io::input::Input;
 use crate::algo_lib::io::output::Output;
@@ -11,19 +11,31 @@ use crate::algo_lib::misc::test_type::TestType;
 type PreCalc = ();
 
 fn solve(input: &mut Input, out: &mut Output, _test_case: usize, _data: &mut PreCalc) {
-    let mut n = input.read_size();
+    let n = input.read_size();
+    let mut stk = input.read_vec::<i32>(2 * n);
+    stk.reverse();
 
-    let mut d = [0; 6];
-    for i in 0..6 {
-        d[i] = n % 10;
-        n /= 10;
+    let mut aux_stk = Vec::new();
+    let mut result = 0;
+
+    while let Some(ai) = stk.pop() {
+        if let Some(&aai) = aux_stk.last() {
+            if ai == aai {
+                aux_stk.pop();
+            } else {
+                aux_stk.push(ai);
+            }
+        } else {
+            aux_stk.push(ai);
+        }
+        result += 1;
     }
-    d.sort();
-    out.print_line(if d == [1, 2, 2, 3, 3, 3] {
-        "Yes"
+
+    if aux_stk.is_empty() {
+        out.print_line(result);
     } else {
-        "No"
-    });
+        out.print_line("impossible");
+    }
 }
 
 pub static TEST_TYPE: TestType = TestType::Single;

@@ -1,6 +1,6 @@
 [workspace]
 members = [
-    "tasks/a123233",
+    "tasks/pairing_socks",
     "main",
     "algo_lib",
 ]
