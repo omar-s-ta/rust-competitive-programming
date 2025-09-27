@@ -123,7 +123,7 @@ impl<'s> Input<'s> {
         res
     }
 
-    fn read_string(&mut self) -> String {
+    pub fn read_string(&mut self) -> String {
         match self.next_token() {
             None => {
                 panic!("Input exhausted");
