@@ -1,5 +1,6 @@
 [workspace]
 members = [
+    "tasks/working_at_the_restaurant",
     "tasks/pairing_socks",
     "main",
     "algo_lib",
