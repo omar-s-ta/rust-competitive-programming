@@ -14,4 +14,5 @@ The repository is organized into the following directories:
 - **`algo_lib/`**: Contains implementations of advanced data structures and
   algorithms in Rust.
 
-- **`tasks/`**: Includes solutions to problems from various online judges and competitions.
+- **`tasks/`**: Includes solutions from various online judges and
+  [Competitive Programming 4 Book](https://cpbook.net/) problems solutions.
