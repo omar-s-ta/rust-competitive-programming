@@ -1,10 +1,8 @@
 # Competitive Programming Repository
 
-This is a mirror repo [competitive-programming-repo](https://github.com/omar-s-ta/competitive-programming),
-but solutions are in Rust.
+This is a `Rust` mirror of the `C++`` repo [competitive-programming](https://github.com/omar-s-ta/competitive-programming),
 
 The repo uses [rust-competitive-helper](https://github.com/rust-competitive-helper/rust-competitive-helper/tree/main).
-
 Some online judges like `UVA` still does not support Rust.
 
 ## Repository Structure
