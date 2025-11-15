@@ -1,6 +1,6 @@
 # Rusty Algorithmic Adventures
 
-This is a `Rust` mirror of the `C++` repo [competitive-programming](https://github.com/omar-s-ta/competitive-programming),
+This is a `Rust` mirror of the `C++` repo [cpp-solver](https://github.com/omar-s-ta/cpp-solver),
 
 ## Repository Structure
 
