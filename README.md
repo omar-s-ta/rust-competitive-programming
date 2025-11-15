@@ -1,16 +1,19 @@
-# Competitive Programming Repository
+# Rusty Algorithmic Adventures
 
-This is a `Rust` mirror of the `C++`` repo [competitive-programming](https://github.com/omar-s-ta/competitive-programming),
-
-The repo uses [rust-competitive-helper](https://github.com/rust-competitive-helper/rust-competitive-helper/tree/main).
-Some online judges like `UVA` still does not support Rust.
+This is a `Rust` mirror of the `C++` repo [competitive-programming](https://github.com/omar-s-ta/competitive-programming),
 
 ## Repository Structure
 
 The repository is organized into the following directories:
 
-- **`algo_lib/`**: Contains implementations of advanced data structures and
-  algorithms in Rust.
+- **`algo_lib/`**: Implementations of core and advanced data structures
+  and algorithms. These are reusable building blocks refined throughout
+  years of solving problems.
 
-- **`tasks/`**: Includes solutions from various online judges and
-  [Competitive Programming 4 Book](https://cpbook.net/) problems solutions.
+- **`tasks/`**: Solutions from various online judges, competitions,
+  and solutions progress of [Competitive Programming 4](https://cpbook.net/)
+
+---
+
+The repo uses [rust-competitive-helper](https://github.com/rust-competitive-helper/rust-competitive-helper/tree/main).
+Some online judges like `UVA` still does not support Rust.
